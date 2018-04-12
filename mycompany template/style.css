@@ -11,6 +11,15 @@ a {
 li {
   list-style: none;
 }
+.line {
+  width: 100px;
+  height: 3px;
+  background-color: orange;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 85px;
+}
+/*-----------------Header*/
 header {
   width: 100%;
   background-color: black;
@@ -44,6 +53,7 @@ nav {
 .topnav .icon {
   display: none;
 }
+/*-----------------Main*/
 main {
   display: flex;
   flex-direction: column;
@@ -104,14 +114,7 @@ main .main_about{
   font-size: 44px;
   padding-bottom: 30px;
 }
-.line {
-  width: 100px;
-  height: 3px;
-  background-color: orange;
-  position: relative;
-  left: 45.5%;
-  margin-bottom: 85px;
-}
+
 .photo {
   background: white;
   width: 125px;
@@ -155,11 +158,113 @@ main .main_about{
   margin-top: 20px;
   margin-bottom: 15px;
 }
+/*-----------------Clients*/
+.main_clients {
+  background-color: black;
+  padding: 100px 0 205px 0;
+  color: orange;
+  text-align: center;
+}
+.main_clients h1 {
+  margin-bottom: 30px;
+}
+.main_clients img {
+  margin-left: 30px;
+}
+/*-----------------Gallery*/
+.main_work {
+  text-align: center;
+  padding: 100px 0 100px 0;
+}
+.main_work h1 {
+  margin-bottom: 30px;
+}
+.main_work p {
+  margin-bottom: 175px;
+  color: gray;
+}
+.main_work img:hover {
+  opacity: 0.8;
+}
+
+/*-----------------Testimonials*/
+.main_testimonials {
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding-bottom: 170px;
+}
+.main_testimonials h1 {
+  text-transform: uppercase;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.main_testimonials .testimonial p {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+/*-----------------Forms*/
+.contact_wrapper {
+  width: 753px;
+  margin: 0 auto;
+  color: black;
+}
+.contact_form {
+  padding: 100px 0 100px 0;
+}
+.contact_form h1, p {
+  text-align: center;
+}
+.contact_form h1 {
+  margin-bottom: 30px;
+}
+.red {
+  color: red;
+}
+.form_inputs {
+  display: flex;
+  margin-top: 100px;
+}
+input {
+  width:  360px;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+input:first-of-type {
+  margin-right: 24px;
+}
+input, textarea {
+  border: 1px solid #999999;
+  margin-top: 5px;
+}
+form p{
+  text-align: left;
+}
+textarea {
+  width: 100%;
+  height: 163px;
+}
+.button_block {
+  display: flex;
+  justify-content: flex-end;
+}
+input[type=submit] {
+  width: 165px;
+  height: 40px;
+  background-color: orange;
+  color: white;
+  margin-right: 0;
+  margin-top: 20px;
+}
 
 
 
 
 
+
+
+/*-----------------Media*/
 footer {
   margin: 0 100px 0 100px;
 }
@@ -203,8 +308,6 @@ footer {
     display: block;
     text-align: left;
   }
-
-
   main .main_welcome{
     padding: 50px 0 50px 0;
   }
@@ -236,5 +339,23 @@ footer {
   .services_cards{
     grid-template-columns: auto;
   }
+  .line1 img:not(:first-child) {
+    display: none;
+  }
+  .line2 img:not(:first-child) {
+    display: none;
+  }
+  .line3 img:not(:first-child) {
+    display: none;
+  }
+  .contact_wrapper{
+    width: 100%;
+  }
+  .form_inputs{
+    display: grid;
+  }
 
+  input {
+    width: 100%;
+  }
 }
