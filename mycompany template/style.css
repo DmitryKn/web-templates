@@ -11,14 +11,7 @@ a {
 li {
   list-style: none;
 }
-.line {
-  width: 100px;
-  height: 3px;
-  background-color: orange;
-  position: relative;
-  margin: 0 auto;
-  margin-bottom: 85px;
-}
+
 /*-----------------Header*/
 header {
   width: 100%;
@@ -54,6 +47,14 @@ nav {
   display: none;
 }
 /*-----------------Main*/
+.line {
+  width: 100px;
+  height: 3px;
+  background-color: orange;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 85px;
+}
 main {
   display: flex;
   flex-direction: column;
