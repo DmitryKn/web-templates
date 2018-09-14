@@ -2,38 +2,113 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Web Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <title></title>
   </head>
   <body>
-    <header>
-      <div class="header-container">
-          <div class="logo">
-            <img src="img/LOGO.png" alt="logo">
-          </div>
-          <input type="checkbox" id="menu-checkbox">
-          <nav role="navigation">
-            <label for="menu-checkbox" class="toggle-button"
-              data-open="Menu" data-close="Close" onclick></label>
-              <ul class="main-menu">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">CONTACTS</a></li>
-              </ul>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')"><span>itProger</span></div>
+    <div id="about">
+      <a href="#" onclick="slowScroll('#main')" title="Opportunities">Opportunities</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Services">Services</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Contacts">Contacts</a>
+      <a href="#" onclick="slowScroll('#faq')" title="FAQ">FAQ</a>
+    </div>
+  </header>
+  <div id="top">
+    <h1>Development</h1>
+    <h3>as a lifestyle</h3>
+  </div>
+  <div id="main">
+    <div class="intro">
+      <h2>Opportunities</h2>
+      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, ad.</span>
+    </div>
+    <div class="text">
+      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi sint omnis
+        recusandae et quis consectetur mollitia magni ipsum. Quae, accusamus.</span>
+    </div>
+  </div>
+  <div id="overview">
 
-          </nav>
+    <div class="img">
+      <img src="https://itproger.com/img/courses/1496744736.jpg" alt="">
+      <p>Learn React JS / Redux from Scratch</p>
+    </div>
+    <div class="img">
+      <img src="https://itproger.com/img/courses/1530341233.jpg" alt="">
+      <p>Learn Photoshop from Scratch</p>
+    </div>
+  </div>
+  <div id="contacts">
+    <center>
+      <h5>Contacts</h5>
+    </center>
+    <form id="form_input" action="">
+      <label for="name">Name: <span>*</span></label><br>
+      <input type="text" placeholder="your name" name="name" id='name'><br>
+      <label for="email">Email: <span>*</span></label><br>
+      <input type="email" placeholder="your email" name="email" id='email'><br>
+      <label for="message">Message: <span>*</span></label><br>
+      <textarea placeholder="your message" name="message" id='message'></textarea><br>
+      <input type="submit" class="btn" id="mess_end">
+    </form>
+    <div id="faq">
+      <div>
+        <span class="title">Lorem</span><br>
+        <span class="heading">Lorem ipsum dolor sit amet?</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Officia fugiat magni aperiam earum ut ex quod, ipsam quam at perferendis.</p>
+        <span class="heading">Lorem ipsum dolor sit amet?</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Officia fugiat magni aperiam earum ut ex quod, ipsam quam at perferendis.</p>
+        <span class="heading">Lorem ipsum dolor sit amet?</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Officia fugiat magni aperiam earum ut ex quod, ipsam quam at perferendis.</p>
       </div>
-    </header>
-<!--  -->
-    <main>
+      <div>
+        <span class="title">Lorem</span><br>
+        <span class="heading">Lorem ipsum dolor sit amet?</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Officia fugiat magni aperiam earum ut ex quod, ipsam quam at perferendis.</p>
+        <span class="heading">Lorem ipsum dolor sit amet?</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Officia fugiat magni aperiam earum ut ex quod, ipsam quam at perferendis.</p>
+        <span class="heading">Lorem ipsum dolor sit amet?</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Officia fugiat magni aperiam earum ut ex quod, ipsam quam at perferendis.</p>
+      </div>
+      <div>
+        <span class="title">Lorem</span><br>
+        <span class="heading">Lorem ipsum dolor sit amet?</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Officia fugiat magni aperiam earum ut ex quod, ipsam quam at perferendis.</p>
+        <span class="heading">Lorem ipsum dolor sit amet?</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Officia fugiat magni aperiam earum ut ex quod, ipsam quam at perferendis.</p>
+        <span class="heading">Lorem ipsum dolor sit amet?</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Officia fugiat magni aperiam earum ut ex quod, ipsam quam at perferendis.</p>
+      </div>
 
-    </main>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
-    <script type="text/javascript">
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id){
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
 
-    </script>
+    $(document).on("scroll", function() {
+      if($(window).scrollTop() === 0){
+        $("header").removeClass("fixed");
+      }else{
+        $("header").addClass("fixed");
+      }
+    })
+  </script>
   </body>
 </html>

@@ -1,42 +1,289 @@
-body{
-  font-family: 'Poppins', sans-serif;
-}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Suez+One');
+
 *{
   margin: 0;
   padding: 0;
+  outline: none;
 }
-li{
-  list-style: none;
-  display: flex;
+body, html{
+  width: 100%;
+  height: 100%;
 }
-a{
-  text-decoration: none;
+body{
+  background-color: #fafafa;
+  font-family: Trebuchet MS, Helvetica;
 }
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: lighter;
+}
+/*======= HEADER =======*/
 header{
-  background: #f6f6f6;
-  padding: 22px 0;
+  width: 100%;
+  padding: 10px 0.5% 0px 0.5%;
+  background: transparent;
+  float:left;
+  position: fixed;
 }
-.header-container{
-  width: 1400px;
-  margin: 0 auto;
+header #logo{
+  color: #fff;
+  cursor: pointer;
+}
+header #logo span {
+  font-size: 1.7em;
+  line-height: 45px;
+  margin-left: 40px;
+  font-family: 'Suez One', serif;
+}
+#about {
+  text-align: center;
+  font-size: 1em;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+#about > a{
+  color:  #fff;
+}
+#about > a:hover{
+  color:  #b0b0b0;
+  text-decoration: underline;
+}
+#about > a:not(:last-child){
+  margin-right: 7%;
+}
+      /* fixed header */
+.fixed{
+  z-index: 5000;
+  background-color: #fff;
+  border-bottom: 1px solid silver;
+}
+.fixed #about a{
+  color: #343434;
+}
+.fixed #about a:hover{
+  color: #7c7c7c;
+}
+header.fixed #logo{
+  color: #343434;
+}
+/*===== MAIN =====*/
+#top{
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://www.lovelymockups.com/wp-content/uploads/2017/01/mackbook-on-table.jpg);
+  background-blend-mode: multiply;
+  background-color: #2e3a44;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  font-size: 3em;
+
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.header-container a{
-  color: black;
-  font-size: 16px;
-  margin-right: 63px;
-  padding: 26px 6px;
+#main {
+  padding: 100px 20%;
+  width: 60%;
+  float: left;
+  background-color: #f6f6f6;
+  border-top: 2px solid silver;
+  color: #484848;
+  font-size: 1.3em;
 }
-.header-container a:hover{
-  background: yellow;
+#main div{
+  width: 48%;
+  margin-right: 2%;
+  float: left;
 }
-#menu-checkbox{
-  display: none;
+#main h2 {
+  font-size: 2em;
 }
-ul{
+#main span {
+  color: #a0a0a0;
+}
+/*===== overview ======*/
+#overview{
+  background-image: url(https://itc.ua/wp-content/uploads/2015/10/0qmm-dYUnrhKWsgmClbLEvBSfpfJUngkZtPxgiqMiNw-671x362.jpg);
+  background-blend-mode: multiply;
+  background-color: #4f1c75;
+  background-size: cover;
+  background-attachment: fixed; /*parallax*/
+  padding: 100px 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
 }
-nav{
-  margin-top: 20px;
+
+#overview .img{
+  flex: 0 0 40%;
+  margin-top: 30px;
+}
+#overview img{
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid white;
+}
+#overview p{
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+/*======= contacts ========*/
+#contacts{
+  width: 100%;
+  float: left;
+  padding-bottom: 40px;
+  padding-top: 70px;
+  border-top: 4px solid #ccc;
+  background: #f4f4f4;
+}
+#contacts h5{
+  font-size: 3em;
+  color: #4f4f4f;
+}
+#form_input{
+  margin-top: 15px;
+  width: 35%;
+  margin-left: 38%;
+  font-size: 1.1em;
+}
+#form_input label{
+  color: #505050;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-family: 'Roboto Slab', serif;
+}
+#form_input label > span{
+  color: #e87e7e;
+}
+#form_input input, textarea{
+  margin-bottom: 10px;
+  width: 70%;
+  padding: 10px 2%;
+  border-radius: 7px;
+  border: 2px solid silver;
+  font-size: 0.9em;
+  color: #4a4a4a;
+  font-family: 'Roboto Slab', serif;
+}
+#form_input input:focus, textarea:focus{
+  border-color: black;
+}
+.btn{
+  float: left;
+  color: white !important;
+  border-radius: 5px;
+  padding: 5px 9px;
+  font-size: 1.2em;
+  background-color: #007bff;
+  text-shadow: #333333 0 0 2px;
+  transition: background-color 0.5s;
+  cursor: pointer;
+  font-family: 'Roboto Slab', serif;
+}
+.btn:hover{
+  background-color: #0455cd;
+}
+/*======= FAQ ========*/
+#faq{
+   background-color: white;
+  border-top: 2px dashed #e4e3e3;
+  width: 100%;
+  float: left;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+#faq div{
+  width: 25%;
+  margin-left: 6%;
+  float: left;
+}
+#faq .title{
+  font-weight: lighter;
+  color: #a3a0ad;
+  margin-bottom: 20px;
+  font-size: 2.2em;
+}
+#faq .heading{
+  color: #7d7d7d;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#faq p {
+  font-family: Arimo, Helvetica, sans-serif;
+  color: #4a4a4a;
+  font-size: 0.9em;
+  margin-bottom: 40px;
+}
+/*======= RESPONSIVE =========*/
+
+@media(max-width:1000px){
+  #top{
+    font-size: 2em;
+  }
+  #main{
+    padding: 100px 10%;
+    widows: 80%;
+  }
+}
+
+@media(min-width: 701px){
+  #logo {
+    float: left;
+    width: 30%;
+    font-size: 1.1em;
+  }
+  #about{
+    float: right;
+    width: 67%;
+  }
+  #faq div{
+    width: 25%;
+    margin-left: 6%;
+    float: left;
+  }
+}
+
+@media(max-width: 700px){
+  #logo {
+    margin-top: 15px;
+    width: 100%;
+    font-size: 1.5em;
+  }
+  #about{
+    float: left;
+    width: 100%;
+  }
+  #main div{
+    width: 98% !important;
+    margin-bottom: 20px;
+  }
+  #main h2{
+    text-align: center;
+  }
+  #faq div{
+    width: 80%;
+    margin-left: 6%;
+    float: left;
+  }
+}
+@media(max-width:650px){
+  #top{
+    font-size: 1em;
+  }
+}
+@media(max-width: 480px){
+  #overview {
+    flex-direction: column;
+  }
+  #overview .img{
+    margin: 10% 10%;
+  }
 }
