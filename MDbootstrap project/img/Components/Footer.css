@@ -1,0 +1,22 @@
+.footer {
+
+  height: auto;
+  width: 100%;
+  background-color: #202638;
+  color: white; }
+  .footer .row {
+    justify-content: space-around; }
+  .footer_contacts {
+    padding: 20px; }
+  .footer_nav:first-child {
+    padding-top: 20px; }
+  .footer_news {
+    padding: 20px; }
+    .footer_news input {
+      margin: 10px 0; }
+  .footer h3 {
+    margin: 10px 0;
+    text-transform: uppercase; }
+
+.footer-text-bold {
+  font-weight: 600; }

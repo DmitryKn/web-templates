@@ -1,0 +1,40 @@
+.side-drawer{
+  margin-top: 6rem;
+  height: 24rem;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  /* max-width: 400px;              для мобильных устройств*/
+  /* transform: translateX(-100%); Открытие справа */
+  transform: translateY(-130%); /*Открытие вертикальное сверху*/
+  transition: transform 0.3s;
+  background-color: gray;
+}
+.side-drawer.open{
+  /* transform: translateX(0px); Открытие справа*/
+  transform: translateY(0px); /*Открытие вертикальное сверху*/
+}
+.side-drawer ul {
+  text-align: center;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 22rem;
+  padding: 0; /*выравнивает по середине*/
+}
+.side-drawer li{
+  margin: 1rem 0;
+}
+.side-drawer a{
+  font-size: 2rem;
+  color: #521751;
+  text-decoration: none;
+}
+.side-drawer a:hover,
+.side-drawer a:active{
+  color: orange;
+}

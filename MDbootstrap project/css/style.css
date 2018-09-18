@@ -1,0 +1,15 @@
+html, body, header, #intro{
+  height: 100%;
+}
+#intro{
+  background: url(../img/back.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.top-nav-collapse{ /* navbar color */
+  background-color: rgba(37, 42, 102, 0.9);
+}
+@media(max-width: 768px){
+  .navbar:not(.top-nav-collapse){
+      background-color: rgba(0, 5, 66, 0.9);
+  }
+}
